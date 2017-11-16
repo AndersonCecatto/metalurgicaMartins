@@ -9,6 +9,8 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 })
 export class NossoTrabalhoComponent implements OnInit {
 
+  // imageAnimation = new EventEmitter<string | MaterializeAction>();
+
   constructor() { }
 
   ngOnInit() {
