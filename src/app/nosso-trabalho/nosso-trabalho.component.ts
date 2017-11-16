@@ -1,0 +1,16 @@
+import { MaterializeAction } from 'angular2-materialize';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+
+@Component({
+  selector: 'app-nosso-trabalho',
+  templateUrl: './nosso-trabalho.component.html',
+  styleUrls: ['./nosso-trabalho.component.scss'],
+  
+})
+export class NossoTrabalhoComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+}

@@ -1,0 +1,32 @@
+.nav-layout{
+    font-family: Arial, 'Helvetica', 'sans-serif';
+    background-color: #34255c;
+    /* opacity: 0.7 */
+}
+
+.page-background{
+    background-color: #f5f5f5;
+    
+}
+.page-footer{
+    background-color: #34255c;
+}
+.btn-social{
+    background: #4267b2;
+    left: 80%;
+}
+
+/* // Class for when element is above threshold */
+.pin-top {
+  position: relative;
+}
+
+/* // Class for when element is below threshold */
+.pin-bottom {
+  position: relative;
+}
+
+/* // Class for when element is pinned */
+.pinned {
+  position: fixed !important;
+}
