@@ -8,7 +8,15 @@ import { MaterializeAction } from 'angular2-materialize';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public carosel1: string;
+  public img_portao: string;
+  public img_estrut: string;
+
+  constructor() { 
+    this.carosel1 = '../../assets/img/header_met.jpg';
+    this.img_portao = '../../assets/img/img-portao.jpg';
+    this.img_estrut = '../../assets/img/img-estrutura.jpg';
+  }
 
   ngOnInit() {
   }
@@ -27,7 +35,7 @@ export class HomeComponent implements OnInit {
   open() {
     this.modalActions1.emit({ action: "modal", params: ['open'] });
   }
-  close() {
+  public close() {
     this.modalActions1.emit({ action: "modal", params: ['close'] });
   }
 

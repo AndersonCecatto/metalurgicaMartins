@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { MaterializeAction } from 'angular2-materialize';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-quem-somos',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuemSomosComponent implements OnInit {
 
-  constructor() { }
+  public carosel1: string;
+
+
+  constructor() {
+    this.carosel1 = '../../assets/img/header_met.jpg';
+   }
 
   ngOnInit() {
   }

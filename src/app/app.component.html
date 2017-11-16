@@ -1,8 +1,10 @@
 <nav class="nav-layout">
   <div class="nav-wrapper">
-    <a routerLink="" class="brand-logo nav-font" style="left: 1%">Metalúrgica Martins</a>
-    <a href="#" materialize="sideNav" [materializeActions]="navbarResponsive" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <!-- <a routerLink="" class="brand-logo nav-font" style="left: 1%">Metalúrgica Martins</a> -->
     <ul class="right hide-on-med-and-down">
+      <li routerLinkActive="active">
+        <a routerLink="/home">Home</a>
+      </li>
       <li routerLinkActive="active">
         <a routerLink="/quem-somos">Quem Somos</a>
       </li>
@@ -13,20 +15,23 @@
         <a routerLink="/contato">Contato</a>
       </li>
     </ul>
+    <a href="#" materialize="sideNav" [materializeActions]="navbarResponsive" data-activates="slide-out" class="button-collapse">
+      <i class="material-icons">menu</i>
+    </a>
     <ul id="slide-out" class="side-nav">
-        <li routerLinkActive="active">
-            <a routerLink="/home">Home</a>
-          </li>
-        <li routerLinkActive="active">
-          <a routerLink="/quem-somos">Quem Somos</a>
-        </li>
-        <li routerLinkActive="active">
-          <a routerLink="/nosso-trabalho">Nosso trabalho</a>
-        </li>
-        <li routerLinkActive="active">
-          <a routerLink="/contato">Contato</a>
-        </li>
-      </ul>
+      <li routerLinkActive="active" (click)="hide()">
+        <a routerLink="/home"><i class="material-icons">home</i>Home</a>
+      </li>
+      <li routerLinkActive="active" (click)="hide()">
+        <a routerLink="/quem-somos"><i class="material-icons">send</i>Quem Somos</a>
+      </li>
+      <li routerLinkActive="active" (click)="hide()">
+        <a routerLink="/nosso-trabalho"><i class="material-icons">send</i>Nosso trabalho</a>
+      </li>
+      <li routerLinkActive="active" (click)="hide()">
+        <a routerLink="/contato"><i class="material-icons">contacts</i>Contato</a>
+      </li>
+    </ul>
   </div>
 </nav>
 
@@ -50,9 +55,9 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    © 2017 Copyright
+      © 2017 Copyright
       <a class="waves-effect waves-light btn social facebook btn-social" href="https://www.facebook.com/metalmartins/">
-      <i class="fa fa-facebook"></i>Siga no Facebook</a>
+        <i class="fa fa-facebook"></i>Siga no Facebook</a>
     </div>
   </div>
 </footer>

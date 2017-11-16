@@ -11,13 +11,12 @@ export class AppComponent {
   title = 'app';
 
   navbarResponsive = new EventEmitter<string | MaterializeAction>();
-  navbarResponsiveHide = new EventEmitter<string | MaterializeAction>();
 
  show(){
-    // this.navbarResponsive.emit("sideNav");
+     this.navbarResponsive.emit("sideNav");
   }
 
   hide(){
-    this.navbarResponsiveHide.emit({ action:'sideNav', params: ['hide'] })
+    this.navbarResponsive.emit({ action:'sideNav', params: ['hide'] })
   }
 }
