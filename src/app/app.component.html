@@ -23,13 +23,17 @@
         <a routerLink="/home"><i class="material-icons">home</i>Home</a>
       </li>
       <li routerLinkActive="active" (click)="hide()">
-        <a routerLink="/quem-somos"><i class="material-icons">send</i>Quem Somos</a>
+        <a routerLink="/quem-somos"><i class="material-icons">mood</i>Quem Somos</a>
       </li>
       <li routerLinkActive="active" (click)="hide()">
-        <a routerLink="/nosso-trabalho"><i class="material-icons">send</i>Nosso trabalho</a>
+        <a routerLink="/nosso-trabalho"><i class="material-icons">settings</i>Nosso trabalho</a>
       </li>
       <li routerLinkActive="active" (click)="hide()">
         <a routerLink="/contato"><i class="material-icons">contacts</i>Contato</a>
+      </li>
+      <li><div class="divider"></div></li>
+      <li (click)="hide()">
+        <a href="https://m.facebook.com/metalmartins/" target="_blank"><i class="material-icons">thumb_up</i>Facebook</a>
       </li>
     </ul>
   </div>
@@ -57,7 +61,7 @@
     <div class="container">
       © 2017 Copyright
       <a class="waves-effect waves-light btn social facebook btn-social" href="https://www.facebook.com/metalmartins/">
-        <i class="fa fa-facebook"></i>Siga no Facebook</a>
+        <i class="material-icons">thumb_up</i>Siga no Facebook</a>
     </div>
   </div>
 </footer>

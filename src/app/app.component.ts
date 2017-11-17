@@ -13,7 +13,7 @@ export class AppComponent {
   navbarResponsive = new EventEmitter<string | MaterializeAction>();
 
  show(){
-     this.navbarResponsive.emit("sideNav");
+     this.navbarResponsive.emit({ action:'sideNav', params: ['show']});
   }
 
   hide(){
