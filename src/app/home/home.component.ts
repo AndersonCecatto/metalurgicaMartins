@@ -31,11 +31,12 @@ export class HomeComponent implements OnInit {
   prev() {
     this.carouselAction.emit({ action: "carousel", params: ['prev'] });
   }
+  
 
   open() {
     this.modalActions1.emit({ action: "modal", params: ['open'] });
   }
-  public close() {
+  close() {
     this.modalActions1.emit({ action: "modal", params: ['close'] });
   }
 

@@ -2,10 +2,13 @@
   <div class="col s12 m12">
     <div class="card">
       <div class="card-content">
-        <div class="carousel carousel-slider center" data-indicators="true" materialize="carousel" [materializeActions]="carouselAction">
-          <!-- <div class="carousel-fixed-item center">
-                       <a class="btn waves-effect white grey-text darken-text-2">button</a>
-                     </div> -->
+        <div class="carousel carousel-slider" data-indicators="true" materialize="carousel" [materializeActions]="carouselAction">
+          <!-- <div class="carousel-fixed-item" style="top: 40%">
+            <a class="waves-effect" (click)="prev()"><i class="large material-icons">keyboard_arrow_left</i></a>
+          </div>
+          <div class="carousel-fixed-item" style="margin-left: 92%; top: 40%">
+            <a class="waves-effect" (click)="next()"><i class="large material-icons">keyboard_arrow_right</i></a>
+          </div> -->
           <div class="carousel-item red white-text" href="#one!">
             <img [src]="carosel1">
           </div>
@@ -21,8 +24,8 @@
         </div>
         <br>
         <div>
-          <a class="waves-effect waves-light btn modal-trigger" (click)="prev()">prev</a>
-          <a class="waves-effect waves-light btn modal-trigger" (click)="next()">next</a>
+          <a class="waves-effect waves-light btn modal-trigger" (click)="prev()"><i class="large material-icons">keyboard_arrow_left</i></a>
+          <a class="waves-effect waves-light btn modal-trigger" (click)="next()"><i class="large material-icons">keyboard_arrow_right</i></a>
         </div>
       </div>
     </div>
