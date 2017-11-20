@@ -1,38 +1,40 @@
+<!-- Slide Inicio -->
 <div class="row">
-  <div class="col s12 m12">
-    <div class="card">
-      <div class="card-content">
-        <div class="carousel carousel-slider" data-indicators="true" materialize="carousel" [materializeActions]="carouselAction">
-          <!-- <div class="carousel-fixed-item" style="top: 40%">
-            <a class="waves-effect" (click)="prev()"><i class="large material-icons">keyboard_arrow_left</i></a>
-          </div>
-          <div class="carousel-fixed-item" style="margin-left: 92%; top: 40%">
-            <a class="waves-effect" (click)="next()"><i class="large material-icons">keyboard_arrow_right</i></a>
-          </div> -->
-          <div class="carousel-item red white-text" href="#one!">
-            <img [src]="carosel1">
-          </div>
-          <div class="carousel-item amber white-text" href="#two!">
-           <img src="https://www.papeldeparede.etc.br/fotos/wp-content/uploads/chicago_dual_monitor-other.jpg">
-          </div>
-          <div class="carousel-item green white-text" href="#three!">
-            <img src="http://www.lareserva.com/home/fimage/machup2w.jpg" alt="">
-          </div>
-          <div class="carousel-item blue white-text" href="#four!">
-            <img src="https://farm8.staticflickr.com/7135/7110561277_f5b56e81f8_b.jpg" alt="">
-          </div>
+  <div class="slider" materialize="slider" [materializeActions]="slideAction" (change)="slide()">
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Metalúrgica Martins</h3>
+          <h5 class="light grey-text text-lighten-3">Agilidade nos Serviços</h5>
         </div>
-        <br>
-        <div>
-          <a class="waves-effect waves-light btn modal-trigger" (click)="prev()"><i class="large material-icons">keyboard_arrow_left</i></a>
-          <a class="waves-effect waves-light btn modal-trigger" (click)="next()"><i class="large material-icons">keyboard_arrow_right</i></a>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Compromisso com o cliente</h3>
+          <h5 class="light grey-text text-lighten-3">Temos a satisfação de atende-lo</h5>
         </div>
-      </div>
-    </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Serviços com qualidade</h3>
+          <h5 class="light grey-text text-lighten-3">Buscamos o melhor para oferece-lo</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Conte Conosco</h3>
+          <h5 class="light grey-text text-lighten-3">Sua satisfação é o nosso compromisso</h5>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
-
-<!-- Conteudo -->
+<!-- Slide Fim -->
+<!-- Conteudo Inicio -->
 <div class="row" >
   <div class="col s12">
     <div class="card col m12">
@@ -43,10 +45,11 @@
         <br>
 
         <div class="col m4">
-          <div class="card waves-effect" href="#modal1" (click)="open()">
+          <div>
             <div class="card-image">
-              <img src="https://http2.mlstatic.com/camera-ip-13-mp-wifi-resoluco-720p-p2p-2-antena-D_NQ_NP_999605-MLB25073487668_092016-F.jpg">
+              <img id="image-test" src="https://http2.mlstatic.com/camera-ip-13-mp-wifi-resoluco-720p-p2p-2-antena-D_NQ_NP_999605-MLB25073487668_092016-F.jpg">
               <span class="card-title" style="color: black">Cameras</span>
+              <div class="btn-floating halfway-fab waves-effect waves-light blue pulse" href="#modal1" (click)="open()"><i class="material-icons">add</i></div>
             </div>
             <div class="card-content">
               <p>Trabalhamos com instalação e venda de cameras wireless de otima qualidade, as cameras possuem um sistema de
@@ -56,10 +59,11 @@
         </div>
 
         <div class="col m4">
-          <div class="card waves-effect" href="#modal2" (click)="open2()">
+          <div>
             <div class="card-image">
               <img [src]="img_portao">
               <span class="card-title" style="color: black">Portões e Cercas</span>
+              <div class="btn-floating halfway-fab waves-effect waves-light blue pulse" href="#modal2" (click)="open2()"><i class="material-icons">add</i></div>
             </div>
             <div class="card-content">
               <p>Trabalhamos com instalação e venda de cameras wireless de otima qualidade, as cameras possuem um sistema de
@@ -69,10 +73,11 @@
         </div>
 
         <div class="col m4">
-          <div class="card waves-effect" (click)="open()">
+          <div>
             <div class="card-image">
               <img [src]="img_estrut">
               <span class="card-title" style="color: black">Estruturas Metálicas</span>
+              <div class="btn-floating halfway-fab waves-effect waves-light blue pulse" href="#modal1" (click)="open()"><i class="material-icons">add</i></div>
             </div>
             <div class="card-content">
               <p>asdhauhsduiahsiduahishd</p>
@@ -84,6 +89,7 @@
     </div>
   </div>
 </div>
+<!-- Conteudo Fim -->
 
 <!-- Inicio Modal1 -->
 <div id="modal1" class="modal modal-fixed-footer" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions1">
@@ -130,86 +136,95 @@
   <!-- Fim Modal1 -->
 
   <!-- Inicio Modal2 -->
-         <div id="modal2" class="modal modal-fixed-footer" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions2">
-            <div class="modal-content">
-              <h4 class="h4-align">Portões</h4>
-              <br>
-              <br>
-              <br>
-              <div class="row">
-                <div class="col m6">
-                  <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" width="650" src="http://www.serralheriagolden.com.br/wp-content/uploads/2015/09/elevacao021.jpg">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Camera Ip
-                        <i class="material-icons right">more_vert</i>
-                      </span>
-                    </div>
-                    <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Camera IP
-                        <i class="material-icons right">close</i>
-                      </span>
-                      <p>Camera IP ótima opção para locais abertos, compacta pode ser instalada com facilidade em diversos locais e bla
-                        bla bla</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col m6">
-                  <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                      <img class="activator" width="650" src="http://www.serralheriagolden.com.br/wp-content/uploads/2015/09/elevacao021.jpg">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4">Camera Ip
-                        <i class="material-icons right">more_vert</i>
-                      </span>
-                    </div>
-                    <div class="card-reveal">
-                      <span class="card-title grey-text text-darken-4">Camera IP
-                        <i class="material-icons right">close</i>
-                      </span>
-                      <p>Camera IP ótima opção para locais abertos, compacta pode ser instalada com facilidade em diversos locais e bla
-                        bla bla</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<div id="modal2" class="modal modal-fixed-footer" materialize="modal" [materializeParams]="[{dismissible: false}]" [materializeActions]="modalActions2">
+  <div class="modal-content">
+    <h4 class="h4-align">Portões</h4>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col m6">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" width="650" src="http://www.serralheriagolden.com.br/wp-content/uploads/2015/09/elevacao021.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Camera Ip
+              <i class="material-icons right">more_vert</i>
+            </span>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Camera IP
+              <i class="material-icons right">close</i>
+            </span>
+            <p>Camera IP ótima opção para locais abertos, compacta pode ser instalada com facilidade em diversos locais e bla
+              bla bla</p>
+          </div>
+        </div>
+      </div>
+      <div class="col m6">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" width="650" src="http://www.serralheriagolden.com.br/wp-content/uploads/2015/09/elevacao021.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Camera Ip
+              <i class="material-icons right">more_vert</i>
+            </span>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Camera IP
+              <i class="material-icons right">close</i>
+            </span>
+            <p>Camera IP ótima opção para locais abertos, compacta pode ser instalada com facilidade em diversos locais e bla
+              bla bla</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                <div class="row">
-                    <div class="col m6">
-                      <div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                          <img class="activator" width="650" src="http://www.serralheriagolden.com.br/wp-content/uploads/2015/09/elevacao021.jpg">
-                        </div>
-                        <div class="card-content">
-                          <span class="card-title activator grey-text text-darken-4">Camera Ip<i class="material-icons right">more_vert</i></span>
-                        </div>
-                        <div class="card-reveal">
-                          <span class="card-title grey-text text-darken-4">Camera IP<i class="material-icons right">close</i></span>
-                          <p>Camera IP ótima opção para locais abertos, compacta pode ser instalada com facilidade em diversos locais e bla bla bla</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col m6">
-                        <div class="card">
-                          <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" width="650" src="http://www.serralheriagolden.com.br/wp-content/uploads/2015/09/elevacao021.jpg">
-                          </div>
-                          <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Camera Ip<i class="material-icons right">more_vert</i></span>
-                          </div>
-                          <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Camera IP<i class="material-icons right">close</i></span>
-                            <p>Camera IP ótima opção para locais abertos, compacta pode ser instalada com facilidade em diversos locais e bla bla bla</p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
+    <div class="row">
+      <div class="col m6">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" width="650" src="http://www.serralheriagolden.com.br/wp-content/uploads/2015/09/elevacao021.jpg">
           </div>
-            <div class="modal-footer">
-              <a class="waves-effect waves-green btn-flat" (click)="close2()">Sair</a>
-            </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Camera Ip
+              <i class="material-icons right">more_vert</i>
+            </span>
           </div>
-          <!-- Fim Modal2 -->
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Camera IP
+              <i class="material-icons right">close</i>
+            </span>
+            <p>Camera IP ótima opção para locais abertos, compacta pode ser instalada com facilidade em diversos locais e bla
+              bla bla</p>
+          </div>
+        </div>
+      </div>
+      <div class="col m6">
+        <div class="card">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" width="650" src="http://www.serralheriagolden.com.br/wp-content/uploads/2015/09/elevacao021.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Camera Ip
+              <i class="material-icons right">more_vert</i>
+            </span>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Camera IP
+              <i class="material-icons right">close</i>
+            </span>
+            <p>Camera IP ótima opção para locais abertos, compacta pode ser instalada com facilidade em diversos locais e bla
+              bla bla</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <a class="waves-effect waves-green btn-flat" (click)="close2()">Sair</a>
+  </div>
+</div>         <!-- Fim Modal2 -->

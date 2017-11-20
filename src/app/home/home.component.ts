@@ -24,6 +24,8 @@ export class HomeComponent implements OnInit {
   carouselAction = new EventEmitter<string | MaterializeAction>();
   modalActions1 = new EventEmitter<string | MaterializeAction>();
   modalActions2 = new EventEmitter<string | MaterializeAction>();
+  slideAction = new EventEmitter<string | MaterializeAction>();
+
 
   next() {
     this.carouselAction.emit({ action: "carousel", params: ['next'] });
@@ -46,6 +48,10 @@ export class HomeComponent implements OnInit {
 
   close2() {
     this.modalActions2.emit({ action: "modal", params: ['close'] });
+  }
+
+  slide(){
+    this.slideAction.emit({ action: ".slider", params: ['slider']})
   }
 
 }

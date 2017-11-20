@@ -9,10 +9,14 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 })
 export class NossoTrabalhoComponent implements OnInit {
 
-  // imageAnimation = new EventEmitter<string | MaterializeAction>();
+   imageAnimation = new EventEmitter<string | MaterializeAction>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  show(){
+    this.imageAnimation.emit({action: 'materialboxed', params: ['materialboxed']});
   }
 }

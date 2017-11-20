@@ -10,12 +10,18 @@ export class QuemSomosComponent implements OnInit {
 
   public carosel1: string;
 
+  parallaxAction = new EventEmitter<string | MaterializeAction>();
+
 
   constructor() {
     this.carosel1 = '../../assets/img/header_met.jpg';
    }
 
   ngOnInit() {
+  }
+
+  show(){
+    this.parallaxAction.emit({action:'parallax', params:['parallax']})
   }
 
 }
