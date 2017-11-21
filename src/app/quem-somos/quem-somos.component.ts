@@ -21,7 +21,7 @@ export class QuemSomosComponent implements OnInit {
   }
 
   show(){
-    this.parallaxAction.emit({action:'parallax', params:['parallax']})
+    this.parallaxAction.emit({action:'.parallax', params:['parallax']})
   }
 
 }
